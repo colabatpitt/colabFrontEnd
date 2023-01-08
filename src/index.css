@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* #background {
+  background-image: radial-gradient(
+      farthest-corner at 40px 40px,
+      #f35 0%,
+      #43e 100%
+  );
+} */
+
+#headertext {
+    background: linear-gradient(
+        125.38deg,
+        #ffffff -18.84%,
+        #ffdb8c 88.15%,
+        #ffaf00 245.81%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.textgradient {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#text-outline {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+#search-background {
+    /* search-background */
+
+    background: conic-gradient(
+        from -7.1deg at 44.44% -16.18%,
+        #ffeac2 -46.16deg,
+        #4b2a16 130.36deg,
+        #eab872 180.94deg,
+        #ae824e 204.46deg,
+        #533018 311.43deg,
+        #ffeac2 313.84deg,
+        #4b2a16 490.36deg
+    );
+    /* border-radius: 23.3087px; */
+}
+
+#join-now-text {
+    /* learn-more-txt */
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #ffffff;
+
+    text-shadow: 0px 0px 9px #000000;
+}
+
+#background {
+    /* Home */
+
+    /* gradient */
+    background: radial-gradient(
+            54.8% 54.8% at top,
+            rgba(255, 184, 28, 0.3) 0%,
+            rgba(255, 184, 28, 0.2) 20%,
+            rgba(255, 184, 28, 0.1) 40%,
+            rgba(217, 217, 217, 0) 100%
+        ),
+        #000000;
+    /* gradient */
+}
+
+#text-outline {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
