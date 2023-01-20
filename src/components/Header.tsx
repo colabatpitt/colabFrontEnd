@@ -72,7 +72,7 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
 
           <div className="flex flex-row items-center justify-center mt-8">
             <div
-              className={`ml-10 bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 w-2/3 md:w-full border border-opacity-10 border-fullyellow ${
+              className={`ml-10 bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 w-full border border-opacity-10 border-fullyellow ${
                 emailError ? "border-red-500 border-opacity-100" : ""
               } ${emailSubmit ? "border-green-500 border-opacity-100" : ""} 
             ${loading ? "border-slate-400 border-opacity-100 " : ""}`}
@@ -87,7 +87,7 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                   name="email"
                   required
                   placeholder="Your Pitt email address"
-                  className={`ml-4 flex items-center text-md font-gray-200 w-full text-white placeholder-gray-300 bg-transparent outline-none focus:border-b-2 border-slate-500 transition-all focus:opacity-100 -pr-4`}
+                  className={`ml-4 flex items-center text-md font-gray-200 w-full text-white placeholder-gray-300 bg-transparent outline-none border-slate-500 transition-all focus:opacity-100 -pr-4`}
                   ref={ref}
                   value={userEmail}
                   onChange={handleChange}
@@ -128,7 +128,7 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   className={`w-9 h-9 text-green-400 transition-all duration-700 ${
-                    emailSubmit ? "opacity-100 block " : "opacity-0 hidden"
+                    emailSubmit ? "opacity-100 " : "opacity-0 hidden"
                   }`}
                 >
                   <path
@@ -163,7 +163,7 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
               emailSubmit ? "opacity-100" : "opacity-0"
             }`}
           >
-            Thank you for submitting your pitt.edu email
+            Recieved. We'll be in touch!
           </p>
           <span className="text-xs" id="text-outline">
             Sign up to learn more about Colab at Pitt

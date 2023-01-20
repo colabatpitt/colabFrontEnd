@@ -7,26 +7,23 @@ import Mission from "./components/Mission";
 import Footer from "./components/Footer";
 
 function App() {
-    const ref = useRef<HTMLInputElement>(null);
-    const handleClick = () => {
-        if (ref.current != null) {
-            ref.current.focus();
-        } else {
-            console.log("ref.current is null");
-        }
-    };
+  const ref = useRef<HTMLInputElement>(null);
+  const handleClick = () => {
+    if (ref.current != null) {
+      ref.current.focus();
+    } else {
+      console.log("ref.current is null");
+    }
+  };
 
-    return (
-        <div
-            className="bg-gray-black h-full w-full tracking-wider   "
-            id="background"
-        >
-            <Header ref={ref} />
-            <Anchors />
-            <Mission />
-            <Footer handleClick={handleClick} />
-        </div>
-    );
+  return (
+    <div className="bg-gray-black h-full w-full " id="background">
+      <Header ref={ref} />
+      <Anchors />
+      <Mission />
+      <Footer handleClick={handleClick} />
+    </div>
+  );
 }
 
 export default App;
