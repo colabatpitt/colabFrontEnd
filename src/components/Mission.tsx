@@ -5,7 +5,7 @@ const Mission = () => {
         <FadeIn
             transitionDuration={750}
             delay={1400}
-            className="max-w-sm mx-4 sm:mx-auto md:max-w-4xl flex justify-center"
+            className="max-w-sm mx-4 sm:mx-auto md:max-w-3xl flex justify-center"
         >
             <div className="text-white mt-12  text-center rounded-2xl py-3 border border-fullyellow">
                 <h2 className="font-bold text-2xl textgradient bg-gradient-to-br pb-2 from-white to-fullyellow border-b border-fullyellow w-full">

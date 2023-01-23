@@ -1,20 +1,20 @@
 import FadeIn from "react-fade-in";
 
 const Anchors = () => {
-  return (
-    <FadeIn
-      className="max-w-sm mx-4 sm:mx-auto md:max-w-4xl flex justify-center"
-      delay={600}
-      transitionDuration={1000}
-    >
-      <div className="text-white mt-64  text-center rounded-2xl py-3 border border-gradientyellow">
-        <div className="md:bg-inherit">
-          <h2 className="font-bold text-2xl textgradient bg-gradient-to-br from-white to-fullyellow pb-2 md:bg-black border-b border-gradientyellow w-full">
-            Our Anchors
-          </h2>
-          <div className="p-8 md:flex md:flex-row">
-            <div className="mt-4 flex flex-col items-center">
-              {/* <svg
+    return (
+        <FadeIn
+            className="max-w-sm mx-4 sm:mx-auto md:max-w-3xl flex justify-center"
+            delay={600}
+            transitionDuration={1000}
+        >
+            <div className="text-white mt-64  text-center rounded-2xl py-3 border border-gradientyellow">
+                <div className="md:bg-inherit">
+                    <h2 className="font-bold text-2xl textgradient bg-gradient-to-br from-white to-fullyellow pb-2 md:bg-black border-b border-gradientyellow w-full">
+                        Our Anchors
+                    </h2>
+                    <div className="p-8 grid grid-cols-3">
+                        <div className="">
+                            {/* <svg
                                 width="73"
                                 height="74"
                                 viewBox="0 0 73 74"
@@ -78,14 +78,14 @@ const Anchors = () => {
                                 </defs>
                             </svg> */}
 
-              <h3 className="font-bold mt-2">Workshops</h3>
-              <p className="font-thin md:pt-2">
-                Learn about the latest technology trends and how to use them
-                effectively
-              </p>
-            </div>
-            <span className="mt-4 flex flex-col items-center">
-              {/* <svg
+                            <h3 className="font-bold mt-2">Workshops</h3>
+                            <p className="font-thin md:pt-2">
+                                Learn about the latest technology trends and how
+                                to use them effectively
+                            </p>
+                        </div>
+                        <span className="flex flex-col items-center">
+                            {/* <svg
                                 width="66"
                                 height="75"
                                 viewBox="0 0 66 75"
@@ -98,15 +98,15 @@ const Anchors = () => {
                                 />
                             </svg> */}
 
-              <h3 className="font-bold mt-2">Community</h3>
-              <p className="font-thin md:pt-2">
-                Find your co-founder, get startup opportunities from around the
-                world, and more
-              </p>
-            </span>
+                            <h3 className="font-bold mt-2">Community</h3>
+                            <p className="font-thin md:pt-2">
+                                Find your co-founder, get startup opportunities
+                                from around the world, and more
+                            </p>
+                        </span>
 
-            <div className="mt-4 flex flex-col items-center">
-              {/* <span className="md:pt-4">
+                        <div className="flex flex-col items-center">
+                            {/* <span className="md:pt-4">
                                 <svg
                                     width="92"
                                     height="57"
@@ -140,17 +140,17 @@ const Anchors = () => {
                                 </svg>
                             </span> */}
 
-              <h3 className="font-bold mt-2 pt-2 ">Startup Fair</h3>
-              <p className="font-thin md:pt-2">
-                Find a startup that&apos;ll pay you a fair wage. No unpaid
-                talent here. Your talent is valuable.
-              </p>
+                            <h3 className="font-bold mt-2">Startup Fair</h3>
+                            <p className="font-thin md:pt-2">
+                                Find a startup that&apos;ll pay you a fair wage.
+                                No unpaid talent here. Your talent is valuable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </FadeIn>
-  );
+        </FadeIn>
+    );
 };
 
 export default Anchors;
