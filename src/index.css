@@ -73,14 +73,7 @@ html {
     /* Home */
 
     /* gradient */
-    background: radial-gradient(
-            54.8% 54.8% at top,
-            rgba(255, 184, 28, 0.3) 0%,
-            rgba(255, 184, 28, 0.2) 20%,
-            rgba(255, 184, 28, 0.1) 40%,
-            rgba(217, 217, 217, 0) 100%
-        ),
-        #000000;
+    background: radial-gradient(ellipse 80% 50% at 50% -20%,rgba(255, 184, 28, 0.3),rgba(217, 217, 217, 0))
     /* gradient */
 }
 
