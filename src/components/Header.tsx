@@ -72,7 +72,7 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
 
           <div className="flex flex-row items-center justify-center mt-8">
             <div
-              className={`bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 sm:w-2.5 lg:w-96 border border-opacity-10 border-fullyellow ${emailError ? "border-red-500 border-opacity-100" : ""
+              className={`bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 lg:w-96 border border-opacity-10 border-fullyellow ${emailError ? "border-red-500 border-opacity-100" : ""
                 } ${emailSubmit ? "border-green-500 border-opacity-100" : ""} 
             ${loading ? "border-slate-400 border-opacity-100 " : ""}`}
             >
