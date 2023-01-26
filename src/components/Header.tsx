@@ -156,7 +156,7 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
               emailError ? "opacity-100" : "opacity-0"
             }`}
           >
-            Please enter a valid pitt.edu email
+            Please enter a Pitt email 🥴
           </p>
           <p
             className={`text-green-400 transition ${
@@ -166,7 +166,7 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
             Recieved. We'll be in touch!
           </p>
           <span className="text-xs" id="text-outline">
-            Sign up to learn more about Colab at Pitt
+            Enter your Pitt email address to join. We’ll send you more info soon.
           </span>
         </div>
       </div>
