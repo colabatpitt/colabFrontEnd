@@ -72,9 +72,8 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
 
           <div className="flex flex-row items-center justify-center mt-8">
             <div
-              className={`ml-10 bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 sm: w-max lg:w-96 border border-opacity-10 border-fullyellow ${
-                emailError ? "border-red-500 border-opacity-100" : ""
-              } ${emailSubmit ? "border-green-500 border-opacity-100" : ""} 
+              className={`bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 lg:w-96 border border-opacity-10 border-fullyellow ${emailError ? "border-red-500 border-opacity-100" : ""
+                } ${emailSubmit ? "border-green-500 border-opacity-100" : ""} 
             ${loading ? "border-slate-400 border-opacity-100 " : ""}`}
             >
               <form
@@ -96,9 +95,8 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className={`w-9 h-9 text-red-500 cursor-pointer transition duration-700 ${
-                    emailError ? "opacity-100 translate-x-full" : "opacity-0"
-                  }`}
+                  className={`w-9 h-9 text-red-500 cursor-pointer transition duration-700 ${emailError ? "opacity-100 translate-x-full" : "opacity-0"
+                    }`}
                 >
                   <path
                     fill-rule="evenodd"
@@ -110,11 +108,10 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className={`w-9 h-9 text-fullyellow cursor-pointer transition duration-200 transition ${
-                    emailError || emailSubmit || loading
+                  className={`w-9 h-9 text-fullyellow cursor-pointer transition duration-200 transition ${emailError || emailSubmit || loading
                       ? " opacity-0 translate-x-full"
                       : "opacity-100"
-                  }`}
+                    }`}
                   onClick={handleSubmit}
                 >
                   <path
@@ -123,36 +120,34 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className={`w-9 h-9 text-green-400 transition-all duration-700 ${
-                    emailSubmit ? "opacity-100 " : "opacity-0 hidden"
-                  }`}
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                {loading ?
+                  <div
+                    className={`lds-ring transition-all duration-700 ml-2 relative ${loading ? "opacity-100" : "opacity-0 hidden"
+                      }`}
+                  >
+                                  <div></div>
+                  </div>
+                  : <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className={`w-9 h-9 text-green-400 transition-all duration-700 ${emailSubmit ? "opacity-100 " : "opacity-0 hidden"
+                      }`}
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>}
               </form>
             </div>
-            <div
-              className={`lds-ring transition-all duration-700 ml-2 relative ${
-                loading ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
           </div>
-          <span className="text-s font-semibold mt-7" id="text-outline">
-            {emailSubmit ? "Recieved! We’ll send you more info soon.": "Enter your Pitt email address to learn more."}
-          </span>
+          <div className="flex flex-row text-center">
+            <span className="text-xs lg:text-sm font-semibold mt-7 lg:w-96" id="text-outline">
+              {emailSubmit ? "Recieved! We’ll send you more info soon." : "Enter your Pitt email address to learn more."}
+            </span>
+          </div>
         </div>
       </div>
     </FadeIn>
