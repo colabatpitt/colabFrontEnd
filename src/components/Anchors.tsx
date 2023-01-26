@@ -12,7 +12,7 @@ const Anchors = () => {
                     <h2 className="font-bold text-2xl textgradient bg-gradient-to-br from-white to-fullyellow pb-2 md:bg-black border-b border-gradientyellow w-full">
                         Our Anchors
                     </h2>
-                    <div className="p-8 grid grid-cols-3">
+                    <div className="p-8 md:grid md:grid-cols-3">
                         <div className="">
                             {/* <svg
                                 width="73"
@@ -79,7 +79,7 @@ const Anchors = () => {
                             </svg> */}
 
                             <h3 className="font-bold mt-2">Workshops</h3>
-                            <p className="font-thin md:pt-2">
+                            <p className="font-md md:pt-2">
                                 Learn about the latest technology trends and how
                                 to use them effectively
                             </p>
@@ -99,7 +99,7 @@ const Anchors = () => {
                             </svg> */}
 
                             <h3 className="font-bold mt-2">Community</h3>
-                            <p className="font-thin md:pt-2">
+                            <p className="font-md md:pt-2">
                                 Find your co-founder, get startup opportunities
                                 from around the world, and more
                             </p>
@@ -141,7 +141,7 @@ const Anchors = () => {
                             </span> */}
 
                             <h3 className="font-bold mt-2">Startup Fair</h3>
-                            <p className="font-thin md:pt-2">
+                            <p className="font-md md:pt-2">
                                 Find a startup that&apos;ll pay you a fair wage.
                                 No unpaid talent here. Your talent is valuable.
                             </p>

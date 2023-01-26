@@ -12,16 +12,16 @@ const Mission = () => {
                     Our Mission
                 </h2>
                 <div className="px-8 py-6 md:px-28">
-                    <p className="font-thin mt-4">
+                    <p className="font-md mt-4">
                         Optimism. Frontiers. Innovation. We are building a
                         community of the next generation of founders, engineers,
                         designers at University of Pittsburgh.
                     </p>
-                    <p className="font-thin mt-4">
+                    <p className="font-md mt-4">
                         We run high-impact events that accelerate student
                         potential and ambition.
                     </p>
-                    <p className="font-thin mt-4">
+                    <p className="font-md mt-4">
                         We believe spontaneity creates ideas so we are
                         connecting the best minds on campus to work on the next
                         generation of technology.
