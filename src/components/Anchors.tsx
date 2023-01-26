@@ -3,7 +3,7 @@ import FadeIn from "react-fade-in";
 const Anchors = () => {
     return (
         <FadeIn
-            className="max-w-sm mx-4 sm:mx-auto md:max-w-3xl flex justify-center"
+            className="max-w-sm mx-4 sm:mx-auto md:max-w-4xl flex justify-center"
             delay={600}
             transitionDuration={1000}
         >
@@ -13,7 +13,7 @@ const Anchors = () => {
                         Our Anchors
                     </h2>
                     <div className="p-8 md:grid md:grid-cols-3">
-                        <div className="">
+                        <div className="flex flex-col items-center md:mr-14">
                             {/* <svg
                                 width="73"
                                 height="74"
@@ -78,7 +78,7 @@ const Anchors = () => {
                                 </defs>
                             </svg> */}
 
-                            <h3 className="font-bold mt-2">Workshops</h3>
+                            <h3 className="font-bold text-xl mt-2">Workshops</h3>
                             <p className="font-md md:pt-2">
                                 Learn about the latest technology trends and how
                                 to use them effectively
@@ -98,14 +98,14 @@ const Anchors = () => {
                                 />
                             </svg> */}
 
-                            <h3 className="font-bold mt-2">Community</h3>
-                            <p className="font-md md:pt-2">
+                            <h3 className="font-bold text-xl mt-2">Community</h3>
+                            <p className="font-md w-52 md:pt-2">
                                 Find your co-founder, get startup opportunities
-                                from around the world, and more
+                                from around the world, and more 
                             </p>
                         </span>
 
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center md:ml-14">
                             {/* <span className="md:pt-4">
                                 <svg
                                     width="92"
@@ -140,8 +140,8 @@ const Anchors = () => {
                                 </svg>
                             </span> */}
 
-                            <h3 className="font-bold mt-2">Startup Fair</h3>
-                            <p className="font-md md:pt-2">
+                            <h3 className="font-bold text-xl mt-2">Startup Fair</h3>
+                            <p className="font-md w-52 md:pt-2">
                                 Find a startup that&apos;ll pay you a fair wage.
                                 No unpaid talent here. Your talent is valuable.
                             </p>
