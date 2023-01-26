@@ -15,13 +15,12 @@ const Footer = ({ handleClick }: Props) => {
                 <div className="px-8 pt-24 pb-16">
                     <div className="grid gap-8 items-start justify-center">
                         <div className="relative group">
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-white to-yellow-100 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                             <button
                                 // id="search-background"
-                                className="relative bg-[#f8aa00] px-6 py-3 rounded-full leading-none flex items-center divide-x divide-gray-600 "
+                                className="relative bg-gradient-to-b from-[#FF9900] to-[#CB8B00] px-6 py-3 rounded-full leading-none flex items-center divide-x divide-gray-600 "
                                 onClick={handleClick}
                             >
-                                <span className="text-white text-lg drop-shadow-2xl background-blur-xl">
+                                <span className="font-semibold text-white text-lg">
                                     Join now
                                 </span>
                             </button>
