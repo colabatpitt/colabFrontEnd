@@ -72,7 +72,7 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
 
           <div className="flex flex-row items-center justify-center mt-8">
             <div
-              className={`ml-10 bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 w-full border border-opacity-10 border-fullyellow ${
+              className={`ml-10 bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 sm: w-max lg:w-96 border border-opacity-10 border-fullyellow ${
                 emailError ? "border-red-500 border-opacity-100" : ""
               } ${emailSubmit ? "border-green-500 border-opacity-100" : ""} 
             ${loading ? "border-slate-400 border-opacity-100 " : ""}`}
@@ -86,10 +86,10 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                 <input
                   name="email"
                   required
-                  placeholder="Your Pitt email address"
-                  className={`ml-4 flex items-center text-md font-gray-200 w-full text-white placeholder-gray-300 bg-transparent outline-none border-slate-500 transition-all focus:opacity-100 -pr-4`}
+                  placeholder={emailError ? "Please enter a Pitt email 🥴" : "Your Pitt email address"}
+                  className={`ml-4 flex items-center text-md font-gray-200 text-white placeholder-gray-300 bg-transparent outline-none border-slate-500 transition-all focus:opacity-100 -pr-4`}
                   ref={ref}
-                  value={userEmail}
+                  value={emailError ? "" : userEmail}
                   onChange={handleChange}
                 />
                 <svg
@@ -150,23 +150,8 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
               <div></div>
             </div>
           </div>
-
-          <p
-            className={`text-red-500 transition ${
-              emailError ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            Please enter a valid pitt.edu email
-          </p>
-          <p
-            className={`text-green-400 transition ${
-              emailSubmit ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            Recieved. We'll be in touch!
-          </p>
-          <span className="text-xs" id="text-outline">
-            Sign up to learn more about Colab at Pitt
+          <span className="text-s font-semibold mt-7" id="text-outline">
+            {emailSubmit ? "Recieved! We’ll send you more info soon.": "Enter your Pitt email address to learn more."}
           </span>
         </div>
       </div>
