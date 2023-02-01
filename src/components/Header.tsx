@@ -64,13 +64,13 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
       <div id="content" className="mb-8">
         <div id="signuppill" className="text-white flex flex-col items-center">
           <h1
-            className="font-extrabold textgradient text-3xl bg-gradient-to-br from-white to-fullyellow mt-24 text-center md:text-6xl leading-tight drop-shadow-2xl"
+            className="font-bold textgradient text-3xl bg-gradient-to-br from-white to-fullyellow mt-24 text-center md:text-6xl leading-tight drop-shadow-2xl"
             id="headertext"
           >
             The next generation of founders start here
           </h1>
 
-          <div className="flex flex-row items-center justify-center mt-8">
+          <div className="flex flex-row items-center justify-center mt-4 md:mt-6">
             <div
               className={`bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 lg:w-96 border border-opacity-10 border-fullyellow ${emailError ? "border-red-500 border-opacity-100" : ""
                 } ${emailSubmit ? "border-green-500 border-opacity-100" : ""} 
@@ -144,7 +144,7 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
             </div>
           </div>
           <div className="flex flex-row text-center">
-            <span className="text-xs lg:text-sm font-semibold mt-7 lg:w-96" id="text-outline">
+            <span className="text-xs lg:text-sm font-semibold mt-4 md:mt-7 lg:w-96" id="text-outline">
               {emailSubmit ? "Recieved! We’ll send you more info soon." : "Enter your Pitt email address to learn more."}
             </span>
           </div>

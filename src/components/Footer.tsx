@@ -21,7 +21,7 @@ const Footer = ({ handleClick }: Props) => {
                                 onClick={handleClick}
                             >
                                 <span className="font-semibold text-white text-lg">
-                                    Join now
+                                    Learn more
                                 </span>
                             </button>
                         </div>
