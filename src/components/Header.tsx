@@ -1,6 +1,7 @@
 import FadeIn from "react-fade-in";
 import React, { useRef, useState, useEffect } from "react";
 import "./Header.css";
+import { MdCalendarMonth } from "react-icons/md";
 
 type Props = {
   ref: React.Ref<HTMLInputElement>;
@@ -60,20 +61,25 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
     setUserEmail(event.currentTarget.value);
   };
   return (
-    <FadeIn delay={0} transitionDuration={0} className="max-w-4xl mx-auto">
-      <div id="content" className="mb-8">
-        <div id="signuppill" className="text-white flex flex-col items-center">
+    <FadeIn
+      delay={0}
+      transitionDuration={0}
+      className="max-w-4xl ml-10 md:ml-20"
+    >
+      <div id="content" className="mb-8 md:flex">
+        <div id="signuppill" className="text-white flex flex-col md:max-w-2xl">
           <h1
-            className="font-bold textgradient text-3xl bg-gradient-to-br from-white to-fullyellow mt-24 text-center md:text-6xl leading-tight drop-shadow-2xl"
+            className="font-bold textgradient text-3xl bg-gradient-to-br from-white to-fullyellow mt-24 md:text-6xl leading-tight drop-shadow-2xl"
             id="headertext"
           >
             The next generation of founders start here
           </h1>
 
-          <div className="flex flex-row items-center justify-center mt-4 md:mt-6">
+          <div className="flex flex-row mt-4 md:mt-6">
             <div
-              className={`bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 lg:w-96 border border-opacity-10 border-fullyellow ${emailError ? "border-red-500 border-opacity-100" : ""
-                } ${emailSubmit ? "border-green-500 border-opacity-100" : ""} 
+              className={`bg-gray-200 bg-opacity-25 rounded-2xl px-2 py-2 lg:w-96 border border-opacity-10 border-fullyellow ${
+                emailError ? "border-red-500 border-opacity-100" : ""
+              } ${emailSubmit ? "border-green-500 border-opacity-100" : ""} 
             ${loading ? "border-slate-400 border-opacity-100 " : ""}`}
             >
               <form
@@ -85,7 +91,11 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                 <input
                   name="email"
                   required
-                  placeholder={emailError ? "Please enter a Pitt email 🥴" : "Your Pitt email address"}
+                  placeholder={
+                    emailError
+                      ? "Please enter a Pitt email 🥴"
+                      : "Your Pitt email address"
+                  }
                   className={`ml-4 flex items-center text-md font-gray-200 text-white placeholder-gray-300 bg-transparent outline-none border-slate-500 transition-all focus:opacity-100 -pr-4`}
                   ref={ref}
                   value={emailError ? "" : userEmail}
@@ -95,8 +105,9 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className={`w-9 h-9 text-red-500 cursor-pointer transition duration-700 ${emailError ? "opacity-100 translate-x-full" : "opacity-0"
-                    }`}
+                  className={`w-9 h-9 text-red-500 cursor-pointer transition duration-700 ${
+                    emailError ? "opacity-100 translate-x-full" : "opacity-0"
+                  }`}
                 >
                   <path
                     fill-rule="evenodd"
@@ -108,10 +119,11 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className={`w-9 h-9 text-fullyellow cursor-pointer transition duration-200 transition ${emailError || emailSubmit || loading
+                  className={`w-9 h-9 text-fullyellow cursor-pointer transition duration-200 transition ${
+                    emailError || emailSubmit || loading
                       ? " opacity-0 translate-x-full"
                       : "opacity-100"
-                    }`}
+                  }`}
                   onClick={handleSubmit}
                 >
                   <path
@@ -120,32 +132,72 @@ const Header = React.forwardRef<HTMLInputElement>((Props, ref) => {
                     clipRule="evenodd"
                   />
                 </svg>
-                {loading ?
+                {loading ? (
                   <div
-                    className={`lds-ring transition-all duration-700 ml-2 relative ${loading ? "opacity-100" : "opacity-0 hidden"
-                      }`}
+                    className={`lds-ring transition-all duration-700 ml-2 relative ${
+                      loading ? "opacity-100" : "opacity-0 hidden"
+                    }`}
                   >
-                                  <div></div>
+                    <div></div>
                   </div>
-                  : <svg
+                ) : (
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className={`w-9 h-9 text-green-400 transition-all duration-700 ${emailSubmit ? "opacity-100 " : "opacity-0 hidden"
-                      }`}
+                    className={`w-9 h-9 text-green-400 transition-all duration-700 ${
+                      emailSubmit ? "opacity-100 " : "opacity-0 hidden"
+                    }`}
                   >
                     <path
                       fill-rule="evenodd"
                       d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z"
                       clip-rule="evenodd"
                     />
-                  </svg>}
+                  </svg>
+                )}
               </form>
             </div>
           </div>
-          <div className="flex flex-row text-center">
-            <span className="text-xs lg:text-sm font-semibold mt-4 md:mt-7 lg:w-96" id="text-outline">
-              {emailSubmit ? "Recieved! We’ll send you more info soon." : "Enter your Pitt email address to learn more."}
+          <div className="flex flex-row">
+            <span
+              className="text-xs lg:text-sm font-semibold mt-4 md:mt-7 lg:w-96"
+              id="text-outline"
+            >
+              {emailSubmit
+                ? "Recieved! We’ll send you more info soon."
+                : "Sign up for an invitation to join our newsletter and community."}
+            </span>
+          </div>
+        </div>
+        <div id="event" className="mt-24 md:ml-2 ">
+          <div id="event-header">
+            <div id="event-header-detail">Upcoming event</div>
+            <div id="event-header-title"> Community Intros Night</div>
+            <div id="event-header-desc">
+              {" "}
+              Introduce yourself to the builder community at Pitt! Create a
+              slide deck about yourself and a topic you're interested in{" "}
+            </div>
+          </div>
+          <div id="event-body">
+            <div id="event-location">
+              <div id="event-location-title">Where</div>
+              <div id="event-location-field">Big Idea Center on Forbes</div>
+            </div>
+            <div id="event-time">
+              <div id="event-time-title">When</div>
+              <div id="event-time-field">March 15th 4:00 - 6:00 PM</div>
+            </div>
+          </div>
+          <div id="event-footer">
+            <span id="event-rsvp-button"> RSVP </span>
+            <span id="event-more-button">
+              {" "}
+              <div id="event-icon">
+                <MdCalendarMonth />{" "}
+              </div>
+              More events{" "}
             </span>
           </div>
         </div>
